@@ -62,23 +62,23 @@ export default function SignUp() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  autoComplete="given-name"
-                  name="firstName"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
-                  autoFocus
+                  id="storeName"
+                  label="Store Name"
+                  name="storeName"
+                  autoComplete="family-name"
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
+                  autoComplete="given-name"
+                  name="tel"
                   required
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
+                  id="tel"
+                  label="Tel"
+                  autoFocus
                 />
               </Grid>
               <Grid item xs={12}>
@@ -100,6 +100,28 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="address1"
+                  label="Address1"
+                  type="address1"
+                  id="address1"
+                  autoComplete="new-address1"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="address2"
+                  label="Address2"
+                  type="address2"
+                  id="address2"
+                  autoComplete="new-address2"
                 />
               </Grid>
               <Grid item xs={12}>
