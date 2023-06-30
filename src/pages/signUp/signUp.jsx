@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { View, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native'
 
 function Copyright(props) {
   return (
@@ -52,9 +53,11 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
+          {/* <LinearGradient colors={[' rgb(237, 86, 129)', 'rgb(186, 168, 206)']} style={styles.linearGradient}> */}
+            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+              <LockOutlinedIcon />
+            </Avatar>
+          {/* </LinearGradient> */}
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
@@ -86,7 +89,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="Email"
                   name="email"
                   autoComplete="email"
                 />
