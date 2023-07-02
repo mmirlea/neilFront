@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { View, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native'
+import axios from 'axios';
 
 function Copyright(props) {
   return (
@@ -39,6 +39,9 @@ export default function SignUp() {
       email: data.get('email'),
       password: data.get('password'),
     });
+    axios.get('/API/signUp').then((res)=>{
+      console.log(res)
+    })
   };
 
   return (

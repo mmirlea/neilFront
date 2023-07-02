@@ -11,23 +11,23 @@ function App() {
   const [data , setData] = useState();
   const url = "http://localhost:3000/login";
   useEffect(()=>{
-    fetch(url, {
-      method: "POST",
-      header: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        storeNm: 'lee',
-        tel: 30,
-        email: 'green@naver.com',
-        password: '1111',
-        address1: '울산시 남구 삼산동',
-        address2: '111',
-      })
-    }).then((res) => console.log(res))
-    .then(data => {
-      console.log(setData(data));
-    })
+    // fetch(url, {
+    //   method: "POST",
+    //   header: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     storeNm: 'lee',
+    //     tel: 30,
+    //     email: 'green@naver.com',
+    //     password: '1111',
+    //     address1: '울산시 남구 삼산동',
+    //     address2: '111',
+    //   })
+    // }).then((res) => console.log(res))
+    // .then(data => {
+    //   console.log(setData(data));
+    // })
   },[])
 
   // const [content, setContent] = useState([]);
