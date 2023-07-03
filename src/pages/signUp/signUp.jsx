@@ -36,10 +36,17 @@ export default function SignUp() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
+      storeName: data.get('storeName'),
+      tel: data.get('tel'),
       email: data.get('email'),
       password: data.get('password'),
+      address1: data.get('address1'),
+      address2: data.get('address2'),
     });
-    axios.get('/API/signUp').then((res)=>{
+    // axios.get('/API/signUp/').then((res)=>{
+    //   console.log(res)
+    // })
+    axios.post('/API/signUp/').then((res)=>{
       console.log(res)
     })
   };
